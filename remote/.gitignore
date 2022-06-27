@@ -6,7 +6,7 @@ bootstrap.jsonp
 build/
 classic.json
 classic.jsonp
-ext/
+node_modules/
 modern.json
 modern.jsonp
 resources/sass/.sass-cache/
