@@ -9,7 +9,7 @@ module.exports = {
     filename: "build.js",
   },
   devServer: {
-    port: 3000,
+    port: 8000,
     open: false,
   },
   module: {
@@ -34,10 +34,11 @@ module.exports = {
     }),
     new ModuleFederationPlugin({
         filename:'remoteEntry.js',
-        name:'remote',
-        exposes:{
-            './NewList':'./src/NewList'
+        name:'host',
+        remotes:{
+          'remoteAppName':'remote@http://localhost:3000/remoteEntry.js'
         }
+      
     })
   ]
 };
